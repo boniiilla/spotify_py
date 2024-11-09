@@ -1,9 +1,9 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
-CLIENT_ID = 'f4d93ea269824dd2bd09bf81777e3764'  # Tu client_id
-CLIENT_SECRET = '712c54a92871429a8376e823db94c16b'  # Tu client_secret
-REDIRECT_URI = 'http://localhost:8888/callback'  # Asegúrate de tener este URI en el panel de desarrolladores de Spotify
+CLIENT_ID = str(input('Introduce tu CLIENT ID:'))
+CLIENT_SECRET = str(input('Introduce tu CLIENT SECRET:'))
+REDIRECT_URI = str(input('Introduce la REDIRECT URI:'))
 
 # Autenticación
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
@@ -32,8 +32,8 @@ track_ids = [track['id'] for track in top_tracks]
 
 # Crear una nueva playlist
 user_id = sp.current_user()['id']  # Obtener el ID de usuario
-playlist_name = "boniiilla_'s favs"  # Nombre de la nueva playlist
-playlist_description = "Playlist creada con las 400 canciones más escuchadas de mi cuenta de Spotify."
+playlist_name = str(input('Como quieres que se llame la playlist? '))  # Nombre de la nueva playlist
+playlist_description = str(input('Describe tu playlist: '))
 
 # Crear la playlist
 playlist = sp.user_playlist_create(user_id, playlist_name, public=False, description=playlist_description)
