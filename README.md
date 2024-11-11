@@ -1,7 +1,3 @@
-¡Claro! Aquí tienes una descripción para tu repositorio de GitHub que puedes utilizar en la sección de **README.md** o en la descripción del repositorio:
-
----
-
 # Spotify Playlist Manager
 
 Este repositorio contiene dos scripts en Python que interactúan con la API de Spotify para gestionar y personalizar tus listas de reproducción. Los programas permiten:
